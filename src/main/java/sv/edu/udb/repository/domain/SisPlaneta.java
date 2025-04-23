@@ -15,7 +15,7 @@ package sv.edu.udb.repository.domain;
     @Builder
     @NoArgsConstructor
     @AllArgsConstructor
-    public class Empleado {
+    public class SisPlaneta {
         /**
          * Antes era el PostComment
          * Clave primaria del empleado
@@ -40,11 +40,11 @@ package sv.edu.udb.repository.domain;
         @Column(nullable = false)
         private LocalDate fechaContratacion;
         /**
-         * *@ManyToOne: Varios empleados pueden estar en el mismo departamento.
-         * fetch = FetchType.LAZY: El departamento solo se carga si se accede explícitamente.
-         * *@JoinColumn(name = "departamento_id"): Clave foránea en la tabla de Empleado.
+         * *@ManyToOne: Varios sisPlanetas pueden estar en el mismo galaxia.
+         * fetch = FetchType.LAZY: El galaxia solo se carga si se accede explícitamente.
+         * *@JoinColumn(name = "departamento_id"): Clave foránea en la tabla de SisPlaneta.
          */
         @ManyToOne(fetch = FetchType.LAZY)
         @JoinColumn(name = "departamento_id")
-        private Departamento departamento;
+        private Galaxia galaxia;
     }

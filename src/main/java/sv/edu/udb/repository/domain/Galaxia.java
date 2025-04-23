@@ -19,10 +19,10 @@ import java.util.List;
 
 
 
-public class Departamento {
+public class Galaxia {
     /**
      * Antes era el Post
-     * Clave primaria del departamento
+     * Clave primaria del galaxia
      * y auto incremento
      */
     @Id
@@ -37,11 +37,11 @@ public class Departamento {
     private String descripcion;
 
     /**
-     * *@OneToMany = da la relacion que hay (un dep tiene varios empleados)
-     * mappedBY = establece la relacion con la clase Empleado en el campo departamento
-     * cascade = CascadeType.ALL = asocia las operaciones de depertamento a sus empleados
-     * orphanRemoval = true = si un empleado no tiene departamento de elimina el empleado
+     * *@OneToMany = da la relacion que hay (un dep tiene varios sisPlanetas)
+     * mappedBY = establece la relacion con la clase SisPlaneta en el campo galaxia
+     * cascade = CascadeType.ALL = asocia las operaciones de depertamento a sus sisPlanetas
+     * orphanRemoval = true = si un empleado no tiene galaxia de elimina el empleado
      * */
     @OneToMany(mappedBy = "departamento", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Empleado> empleados = new ArrayList<>();
+    private List<SisPlaneta> sisPlanetas = new ArrayList<>();
 }

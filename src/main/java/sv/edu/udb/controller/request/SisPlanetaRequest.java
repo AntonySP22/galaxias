@@ -6,7 +6,7 @@
     import java.time.LocalDate;
 
     @Data
-    public class EmpleadoRequest {
+    public class SisPlanetaRequest {
         /**
          * Es una plantilla de como se espera recibir los datos
          */
@@ -22,6 +22,6 @@
         @NotNull(message = "La fecha de contratación es obligatoria")
         private LocalDate fechaContratacion;
 
-        @NotNull(message = "El ID del departamento es obligatorio")
+        @NotNull(message = "El ID del galaxia es obligatorio")
         private Long departamentoId;
     }

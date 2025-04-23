@@ -24,11 +24,11 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `departamento`
+-- Estructura de tabla para la tabla `galaxia`
 --
 
-DROP TABLE IF EXISTS `departamento`;
-CREATE TABLE IF NOT EXISTS `departamento` (
+DROP TABLE IF EXISTS `galaxia`;
+CREATE TABLE IF NOT EXISTS `galaxia` (
   `id` bigint NOT NULL,
   `descripcion` varchar(255) DEFAULT NULL,
   `nombred` varchar(255) NOT NULL,
@@ -36,13 +36,13 @@ CREATE TABLE IF NOT EXISTS `departamento` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Volcado de datos para la tabla `departamento`
+-- Volcado de datos para la tabla `galaxia`
 --
 
-INSERT INTO `departamento` (`id`, `descripcion`, `nombred`) VALUES
-(1, 'Departamento encargado de gestión de personal', 'Recursos Humanos'),
-(2, 'Departamento encargado de gestionar la publicidad', 'Marketing'),
-(3, 'Departamento encargado de gestionar las ventas', 'Ventas');
+INSERT INTO `galaxia` (`id`, `descripcion`, `nombred`) VALUES
+(1, 'Galaxia encargado de gestión de personal', 'Recursos Humanos'),
+(2, 'Galaxia encargado de gestionar la publicidad', 'Marketing'),
+(3, 'Galaxia encargado de gestionar las ventas', 'Ventas');
 
 -- --------------------------------------------------------
 
@@ -65,11 +65,11 @@ INSERT INTO `departamento_seq` (`next_val`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `empleado`
+-- Estructura de tabla para la tabla `sisPlaneta`
 --
 
-DROP TABLE IF EXISTS `empleado`;
-CREATE TABLE IF NOT EXISTS `empleado` (
+DROP TABLE IF EXISTS `sisPlaneta`;
+CREATE TABLE IF NOT EXISTS `sisPlaneta` (
   `id` bigint NOT NULL,
   `apellido` varchar(255) NOT NULL,
   `cargo` varchar(255) DEFAULT NULL,
@@ -82,10 +82,10 @@ CREATE TABLE IF NOT EXISTS `empleado` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Volcado de datos para la tabla `empleado`
+-- Volcado de datos para la tabla `sisPlaneta`
 --
 
-INSERT INTO `empleado` (`id`, `apellido`, `cargo`, `fecha_contratacion`, `nombre`, `salario`, `departamento_id`) VALUES
+INSERT INTO `sisPlaneta` (`id`, `apellido`, `cargo`, `fecha_contratacion`, `nombre`, `salario`, `departamento_id`) VALUES
 (1, 'Pérez', 'Analista', '2023-05-20', 'Juan', 1200, 1),
 (2, 'Fuentes', 'Lider de Equipo', '2023-05-20', 'Pedro', 1500, 3),
 (3, 'Fuentes', 'Coordinador', '2023-05-20', 'Pedro', 1000, 2);
@@ -113,10 +113,10 @@ INSERT INTO `empleado_seq` (`next_val`) VALUES
 --
 
 --
--- Filtros para la tabla `empleado`
+-- Filtros para la tabla `sisPlaneta`
 --
-ALTER TABLE `empleado`
-  ADD CONSTRAINT `FKhdjjhohpyjsfta5g6p8b8e00i` FOREIGN KEY (`departamento_id`) REFERENCES `departamento` (`id`);
+ALTER TABLE `sisPlaneta`
+  ADD CONSTRAINT `FKhdjjhohpyjsfta5g6p8b8e00i` FOREIGN KEY (`departamento_id`) REFERENCES `galaxia` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

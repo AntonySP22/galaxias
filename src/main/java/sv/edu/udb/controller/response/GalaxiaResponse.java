@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 
 @Data
 @AllArgsConstructor
-public class DepartamentoResponse {
+public class GalaxiaResponse {
     /**
      * Es una el orden/formato en como se enviaran los datos al ser consultados
      */

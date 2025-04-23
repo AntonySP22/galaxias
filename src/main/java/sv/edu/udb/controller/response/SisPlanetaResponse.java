@@ -4,7 +4,7 @@ import lombok.Data;
 import java.time.LocalDate;
 
 @Data
-public class EmpleadoResponse {
+public class SisPlanetaResponse {
     /**
      * Es una el orden/formato en como se enviaran los datos al ser consultados
      */
@@ -14,5 +14,5 @@ public class EmpleadoResponse {
     private String cargo;
     private Double salario;
     private LocalDate fechaContratacion;
-    private DepartamentoResponse departamento;
+    private GalaxiaResponse departamento;
 }
